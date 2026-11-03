@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
+
+<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- <title>Scientific Software Knowledge Graphs</title> -->
@@ -19,11 +20,11 @@
 	//////////////////////////////////////////////////////
 	 -->
 
-  
+
 
 	<!-- <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">	 -->
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
-	
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -44,112 +45,221 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
-	</head>
-	<body>
-		
+</head>
+
+<body>
+
 	<div class="fh5co-loader"></div>
-	
+
 	<div id="page">
-	<nav class="fh5co-nav" role="navigation">
-		<div class="top-menu">
+		<nav class="fh5co-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-3">
+							<!-- <div id="fh5co-logo"><a href="index.html">SciSoft-KG<span>.</span></a></div> -->
+						</div>
+						<div class="col-xs-9 text-right menu-1">
+							<ul>
+								<li class><a href="index.html">Home</a></li>
+								<li class><a href="publications.html">Publications</a></li>
+								<li class="active"><a href="tools.html">Tooling</a></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</nav>
+
+		<!-- fh5co-wireframe   fh5co-features-->
+		<div id="fh5co-wireframe">
 			<div class="container">
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<h2>Project Tools</h2>
+					</div>
+				</div>
+				<div class="row animate-box">
+					<div class="col-md-10 col-md-offset-1">
+						<p>All tools are open source, developed in the <a
+								href="https://github.com/SoftwareUnderstanding">SoftwareUnderstanding</a> GitHub
+							organisation, released on PyPI and archived on Zenodo and Software Heritage.</p>
+						<p>Which one to use? A researcher who wants a check in their own CI, like a unit test, adds
+							<b>rsmetacheck-action</b>. A registry, lab or organisation that wants to watch many
+							repositories without touching them runs <b>rsmetacheck-bot</b>.
+						</p>
+						<br>
+					</div>
+				</div>
+
 				<div class="row">
-					<div class="col-xs-3">
-						<!-- <div id="fh5co-logo"><a href="index.html">SciSoft-KG<span>.</span></a></div> -->
+					<div class="col-md-6 animate-box">
+						<div class="user-frame" style="margin-bottom: 30px;">
+							<h3>rsmetacheck</h3>
+							<p>Core library and command-line tool. It runs <a
+									href="https://github.com/KnowledgeCaptureAndDiscovery/somef">SoMEF</a> on one or
+								many repositories (GitHub, GitLab, any branch or tag), applies the 29 detection rules of
+								the catalogue, and writes one JSON-LD report per repository in the EVERSE assessment
+								schema. Each finding carries its evidence (file and value), a link to the catalogue
+								entry and a suggestion built from the repository itself, e.g. "set <code>version</code>
+								to 1.2.0, the latest release". It can also generate a <code>codemeta.json</code> from
+								SoMEF output.</p>
+							<p>v0.3.6 · DOI <a
+									href="https://doi.org/10.5281/zenodo.18956787">10.5281/zenodo.18956787</a></p>
+							<p><a href="https://github.com/SoftwareUnderstanding/rsmetacheck">Source code</a> · <a
+									href="https://rsmetacheck.readthedocs.io">Documentation</a></p>
+						</div>
 					</div>
-					<div class="col-xs-9 text-right menu-1">
-						<ul>
-                            <li class><a href="index.html">Home</a></li>
-                            <li class><a href="publications.html">Publications</a></li>
-                            <li class="active"><a href="tools.html">Tooling</a></li>
-						</ul>
+
+					<div class="col-md-6 animate-box">
+						<div class="user-frame" style="margin-bottom: 30px;">
+							<h3>rsmetacheck-action</h3>
+							<p>GitHub Action for developers. It runs rsmetacheck on each push or pull request, shows the
+								findings as a Markdown summary and as inline annotations on the pull request diff, and
+								fails the step when it finds issues. The rsmetacheck documentation describes an
+								equivalent GitLab CI/CD job.</p>
+							<p>v0.3.6, versioned with the core package</p>
+							<p><a href="https://github.com/marketplace/actions/rsmetacheck">GitHub Marketplace</a> · <a
+									href="https://github.com/SoftwareUnderstanding/rsmetacheck-action">Source code</a>
+							</p>
+						</div>
 					</div>
 				</div>
-				
+
+				<div class="row">
+					<div class="col-md-6 animate-box">
+						<div class="user-frame" style="margin-bottom: 30px;">
+							<h3>rsmetacheck-bot</h3>
+							<p>Bot for whoever oversees a set of repositories. It takes a list of repositories, runs
+								rsmetacheck, and opens, updates or closes one issue per repository. It remembers the
+								last analysed commit, the issue it opened and any opt-out, so maintainers get one issue
+								per repository, not one per run. It supports GitHub, GitLab.com and self-hosted GitLab,
+								an <code>unsubscribe</code> command and a dry-run mode, and proposes a ready-to-use
+								<code>codemeta.json</code> when a repository has none. It runs on the ESCAPE OSSR and on
+								the OEG-UPM organisation.
+							</p>
+							<p>v0.6.1 · DOI <a
+									href="https://doi.org/10.5281/zenodo.19468976">10.5281/zenodo.19468976</a></p>
+							<p><a href="https://github.com/SoftwareUnderstanding/rsmetacheck-bot">Source code</a></p>
+						</div>
+					</div>
+
+					<div class="col-md-6 animate-box">
+						<div class="user-frame" style="margin-bottom: 30px;">
+							<h3>rsmetacheck-dashboard</h3>
+							<p>Static website regenerated after each bot run. It lists the monitored repositories, their
+								latest findings, links to the bot issues and the history of past runs.</p>
+							<p>v0.2.0</p>
+							<p><a href="https://softwareunderstanding.github.io/rsmetacheck-dashboard/">Public
+									dashboard</a> · <a
+									href="https://github.com/SoftwareUnderstanding/rsmetacheck-dashboard">Source
+									code</a></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 animate-box">
+						<div class="user-frame" style="margin-bottom: 30px;">
+							<h3>Auto CodeMeta generator</h3>
+							<p>Web application to create a <code>codemeta.json</code> file. It extends the CodeMeta
+								generator maintained with Software Heritage: paste a GitHub, GitLab, Codeberg or
+								Bitbucket URL and SoMEF pre-fills the form (name, description, dates, SPDX license,
+								keywords, authors, CI, issue tracker, languages). It produces CodeMeta 2.0 or 3.0 and
+								validates the result.</p>
+							<p>v3.0</p>
+							<p><a href="https://autocodemeta.linkeddata.es/">Use the tool</a> · <a
+									href="https://github.com/oeg-upm/auto-codemeta-generator">Source code</a></p>
+						</div>
+					</div>
+
+					<div class="col-md-6 animate-box">
+						<div class="user-frame" style="margin-bottom: 30px;">
+							<h3>SoMEF</h3>
+							<p>Software Metadata Extraction Framework, maintained by UPM. It extracts metadata from
+								README files, package manifests and platform APIs, and underpins every tool above.
+								CodeMetaSoft drove releases 0.9.9 to 0.10.3: GitLab support, SPDX license export,
+								release, version and commit ID extraction, and CodeMeta export fixes. Running
+								rsmetacheck at scale exposed extraction bugs, and each fix reduced false positives in
+								rsmetacheck.</p>
+							<p><a href="https://github.com/KnowledgeCaptureAndDiscovery/somef">Source code</a></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<h2>Data and Resources</h2>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 animate-box">
+						<div class="user-frame" style="margin-bottom: 30px;">
+							<h3>Metadata pitfalls catalogue</h3>
+							<p>29 metadata issues (19 pitfalls, 10 warnings) in six themes: structure and schema,
+								licensing and attribution, versioning and synchronisation, citation and provenance,
+								documentation, automation and quality control. Each entry has a definition, a real
+								example, suggested fixes and a persistent identifier, e.g.
+								<code>https://w3id.org/rsmetacheck/catalog/#P001</code>. Open to community
+								contributions.
+							</p>
+							<p><a href="https://w3id.org/rsmetacheck/catalog">Browse the catalogue</a></p>
+						</div>
+					</div>
+
+					<div class="col-md-6 animate-box">
+						<div class="user-frame" style="margin-bottom: 30px;">
+							<h3>Software metadata in OpenAIRE</h3>
+							<p>Analysis of 370,684 software repositories referenced in the OpenAIRE Graph: 88.6% have a
+								README, 55% a LICENSE file, 1.6% a <code>CITATION.cff</code> and 0.13% a
+								<code>codemeta.json</code>.
+							</p>
+							<p><a href="https://anas-elhounsri.github.io/openaire-report/0.0.1/">Read the report</a></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 animate-box">
+						<div class="user-frame" style="margin-bottom: 30px;">
+							<h3>OSSR metadata analysis</h3>
+							<p>rsmetacheck results for the 30 projects of the ESCAPE OSSR, and the CodeMeta completeness
+								indicator tracked over time.</p>
+							<p><a href="https://gitlab.com/escape-ossr/ossr-metadata-analysis">Analysis repository</a> ·
+								<a href="https://w3id.org/ossr-rs-quality">OSSR quality reports</a>
+							</p>
+						</div>
+					</div>
+
+				</div>
 			</div>
 		</div>
-	</nav>
-
-    <!-- fh5co-wireframe   fh5co-features-->
-	<div id="fh5co-wireframe">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Project Tools</h2>
-				</div>
-			</div>
-			
-			<div class="row">
-				<div class="col-md-6 animate-box">
-					<div class="user-frame" style="margin-bottom: 30px;">
-						<h3>Autocodemeta</h3>
-						<p>A web-based application designed to simplify the creation of standardized software descriptions by automatically pulling data 
-                            from repository URLs to generate a codemeta.json file. It allows users to input a link from platforms like GitHub or GitLab 
-                            and then uses that information to populate mandatory and optional fields, such as license details, funding sources, and author 
-                            information.</p>
-						<p><a href="https://autocodemeta.linkeddata.es/">Link to the tool</a></p>
-					</div>
-				</div>
-				
-				<div class="col-md-6 animate-box">
-					<div class="user-frame" style="margin-bottom: 30px;">
-						<h3>sw-metadata-bot</h3>
-						<p>This is the bot that complement the tool <a href="https://github.com/SoftwareUnderstanding/RsMetaCheck">RsMetaCheck</a>, it pushes issues 
-                            to the repository with reports generated by RsMetaCheck with pitfalls like missing license details, alongside suggestions to
-                            let the creators know what needs to be updated. This keep the project's documentation clear and reliable so that it can be used
-                            without running into errors caused by outdated or missing information.</p>
-						<p><a href="https://github.com/SoftwareUnderstanding/sw-metadata-bot">Link to the tool</a></p>
-					</div>
-				</div>
-            </div>
-
-            <div class="row">
-				<div class="col-md-6 animate-box">
-					<div class="user-frame" style="margin-bottom: 30px;">
-						<h3>RSMetacheck</h3>
-						<p> This project provides an automated tool for detecting common metadata quality issues (pitfalls & Warnings) in software repositories. 
-                            The tool analyzes <a href="https://github.com/KnowledgeCaptureAndDiscovery/somef">SoMEF</a> (Software Metadata Extraction Framework) 
-                            output files to identify 29 different types of metadata quality issues across multiple programming languages. </p>
-						<p><a href="https://github.com/SoftwareUnderstanding/RsMetaCheck">Link to the tool</a></p>
-					</div>
-				</div>
-				
-				<div class="col-md-6 animate-box">
-					<div class="user-frame" style="margin-bottom: 30px;">
-						<h3>SoMEF</h3>
-						<p>Command-line tool that uses machine learning and regular expressions to automatically extract extensive metadata from a project's 
-                            documentation and configuration files. It scans files to identify technical details such as installation 
-                            instructions, as well as metadata like citation preferences.
-                            It is designed to help build knowledge graphs of scientific software, making it easier to understand the 
-                            requirements and functions of codebases.</p>
-						<p><a href="https://github.com/KnowledgeCaptureAndDiscovery/somef">Link to the tool</a></p>
-					</div>
-				</div>
-
+		<div class="row copyright">
+			<div class="col-md-12 text-center">
+				<p>
+					<!--<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> -->
+					<small class="block">This page was built on a free template designed by <a
+							href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> (&copy; 2016 Free
+						HTML5)</small>
+				</p>
 			</div>
 		</div>
+
 	</div>
-			<div class="row copyright">
-				<div class="col-md-12 text-center">
-					<p>
-						<!--<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> -->
-						<small class="block">This page was built on a free template designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> (&copy; 2016 Free HTML5)</small>
-					</p>
-				</div>
-			</div>
-
-		</div>
 	</footer>
 	</div>
 	<footer id="site-footer">
 		<div class="footer-container">
 			<p class="oscars-logo">
 				<a href="https://oscars-project.eu/">
-				<img src="media/OSCARS-logo.png" alt="Funding Organization Logo" class="footer-logo">
+					<img src="media/OSCARS-logo.png" alt="Funding Organization Logo" class="footer-logo">
 				</a>
 			</p>
 			<p class="acknowledgment">
-			The authors acknowledge the OSCARS project, which has received funding from the European Commission's Horizon Europe Research and Innovation programme under grant agreement No. 101129751
+				The authors acknowledge the OSCARS project, which has received funding from the European Commission's
+				Horizon Europe Research and Innovation programme under grant agreement No. 101129751
 			</p>
 		</div>
 	</footer>
@@ -157,7 +267,7 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
 	</div>
-	
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -171,5 +281,6 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
-	</body>
+</body>
+
 </html>
