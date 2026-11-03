@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
+
+<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- <title>Scientific Software Knowledge Graphs</title> -->
@@ -19,11 +20,11 @@
 	//////////////////////////////////////////////////////
 	 -->
 
-  
+
 
 	<!-- <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">	 -->
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
-	
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -35,6 +36,39 @@
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
+	<style>
+		.publication {
+			margin: 0 0 18px 0;
+			padding-bottom: 12px;
+			border-bottom: 1px solid #eee;
+		}
+		.publication:last-child {
+			border-bottom: none;
+		}
+		.publication h3 {
+			margin: 0 0 4px 0;
+			font-size: 20px;
+			line-height: 1.3;
+		}
+		.publication p {
+			margin: 0;
+			line-height: 1.5;
+		}
+		.fh5co-heading {
+			margin-bottom: 1em;
+		}
+		.fh5co-heading h2 {
+			margin-bottom: 0;
+		}
+		.section-spaced {
+			margin-top: 70px;
+		}
+		.publication p.publication-description {
+			margin-top: 4px;
+			font-style: italic;
+			color: #666;
+		}
+	</style>
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -47,126 +81,167 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
-	</head>
-	<body>
-		
+</head>
+
+<body>
+
 	<div class="fh5co-loader"></div>
-	
+
 	<div id="page">
-	<nav class="fh5co-nav" role="navigation">
-		<div class="top-menu">
+		<nav class="fh5co-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-3">
+							<!-- <div id="fh5co-logo"><a href="index.html">SciSoft-KG<span>.</span></a></div> -->
+						</div>
+						<div class="col-xs-9 text-right menu-1">
+							<ul>
+								<li class><a href="index.html">Home</a></li>
+								<li class="active"><a href="publications.html">Publications</a></li>
+								<li class><a href="tools.html">Tooling</a></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</nav>
+
+		<!-- fh5co-wireframe   fh5co-features-->
+		<div id="fh5co-wireframe">
 			<div class="container">
-				<div class="row">
-					<div class="col-xs-3">
-						<!-- <div id="fh5co-logo"><a href="index.html">SciSoft-KG<span>.</span></a></div> -->
-					</div>
-					<div class="col-xs-9 text-right menu-1">
-						<ul>
-                            <li class><a href="index.html">Home</a></li>
-                            <li class="active"><a href="publications.html">Publications</a></li>
-                            <li class><a href="tools.html">Tooling</a></li>
-						</ul>
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<h2>Project Publications</h2>
 					</div>
 				</div>
-				
-			</div>
-		</div>
-	</nav>
 
-    <!-- fh5co-wireframe   fh5co-features-->
-	<div id="fh5co-wireframe">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Project Publications</h2>
-				</div>
-			</div>
-			
-			<div class="row animate-box">
-				<div id="output"></div>
+				<div class="row animate-box">
+					<div id="output"></div>
 
-                <script>
-                    fetch('publications.bib')
-                        .then(response => {
-                            if (!response.ok) {
-                                throw new Error('Error al cargar el archivo');
-                            }
-                            return response.text();
-                        })
-                        .then(data => {
-							const bibData = bibtexParse.toJSON(data);
-							const output = document.getElementById('output');
-					
-							let content = '';
-					
-							bibData.forEach(entry => {
-								const tags = entry.entryTags;
-								let entryText = '<div class="publication">';
-					
-								// Título aparte
-								if (tags.title) {
-									entryText += `<h3>${tags.title}</h3>`;
-								} else {
-									entryText += `<h3>Untitled</h3>`;
+					<script>
+						fetch('publications.bib')
+							.then(response => {
+								if (!response.ok) {
+									throw new Error('Error al cargar el archivo');
 								}
-					
-								// Construcción de la información en un solo <p>
-								let details = '';
-					
-								if (tags.author) {
-									details += `${tags.author}. `;
-								}
-								if (tags.booktitle) {
-									details += `<em>${tags.booktitle}</em>. `;
-								}
-								if (tags.publisher) {
-									details += `${tags.publisher}. `;
-								}
-								if (tags.series) {
-									details += `${tags.series}. `;
-								}
-								if (tags.year) {
-									details += `${tags.year}. `;
-								}
-								if (tags.url) {
-									details += `<a href="${tags.url}" target="_blank">${tags.url}</a>. `;
-								}
-					
-								entryText += `<p>${details}</p>`;
-								entryText += '</div>';
-								content += entryText;
+								return response.text();
+							})
+							.then(data => {
+								const bibData = bibtexParse.toJSON(data);
+								const output = document.getElementById('output');
+
+								let content = '';
+
+								bibData.forEach(entry => {
+									const tags = entry.entryTags;
+									let entryText = '<div class="publication">';
+
+									// Título aparte
+									if (tags.title) {
+										entryText += `<h3>${tags.title}</h3>`;
+									} else {
+										entryText += `<h3>Untitled</h3>`;
+									}
+
+									// Construcción de la información en un solo <p>
+									let details = '';
+
+									if (tags.author) {
+										details += `${tags.author}. `;
+									}
+									if (tags.booktitle) {
+										details += `<em>${tags.booktitle}</em>. `;
+									}
+									if (tags.publisher) {
+										details += `${tags.publisher}. `;
+									}
+									if (tags.series) {
+										details += `${tags.series}. `;
+									}
+									if (tags.note) {
+										details += `${tags.note}. `;
+									}
+									if (tags.year) {
+										details += `${tags.year}. `;
+									}
+									if (tags.doi && !(tags.url && tags.url.includes(tags.doi))) {
+										details += `DOI: <a href="https://doi.org/${tags.doi}" target="_blank">${tags.doi}</a>. `;
+									}
+									if (tags.url) {
+										details += `<a href="${tags.url}" target="_blank">${tags.url}</a>. `;
+									}
+
+									entryText += `<p>${details}</p>`;
+									if (tags.description) {
+										entryText += `<p class="publication-description">${tags.description}</p>`;
+									}
+									entryText += '</div>';
+									content += entryText;
+								});
+
+								output.innerHTML = content;
+							})
+							.catch(error => {
+								document.getElementById('output').textContent = `Error: ${error.message}`;
 							});
-					
-							output.innerHTML = content;
-						})
-                        .catch(error => {
-                            document.getElementById('output').textContent = `Error: ${error.message}`;
-                        });
-                </script>
-			</div>
-		</div>
-	</div>
-			<div class="row copyright">
-				<div class="col-md-12 text-center">
-					<p>
-						<!--<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> -->
-						<small class="block">This page was built on a free template designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> (&copy; 2016 Free HTML5)</small>
-					</p>
+					</script>
+				</div>
+
+				<div class="row animate-box section-spaced">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<h2>Talks, Posters and Training</h2>
+					</div>
+				</div>
+				<div class="row animate-box">
+					<ul>
+						<li>OSCARS kick-off, December 2024: <a href="https://zenodo.org/records/14500446"
+								target="_blank">OSSR presentation</a>.</li>
+						<li>OSCARS funded-projects session, Rome, 3 March 2025 (<a
+								href="https://github.com/SoftwareUnderstanding/CodeMetaSoft_website/blob/main/slides/CodeMetaSoft_OSCARS_Funded_Projects_Rome_3_March_2025.pptx.pdf"
+								target="_blank">slides</a>).</li>
+						<li>OSCARS update presentation, May 2025 (<a
+								href="https://github.com/SoftwareUnderstanding/CodeMetaSoft_website/blob/main/slides/CodeMetaSoft_OSCARS_Funded_Projects_May_2025.pptx.pdf"
+								target="_blank">slides</a>).</li>
+						<li>OSCARS funded-projects update, January 2026 (<a
+								href="https://github.com/SoftwareUnderstanding/CodeMetaSoft_website/blob/main/slides/CodeMetaSoft_OSCARS_Funded_Projects_Jan_2026.pptx.pdf"
+								target="_blank">slides</a>).</li>
+						<li>EVERSE General Assembly, February 2026: short presentation of CodeMetaSoft and the bot in
+							the RESQUI demo session.</li>
+						<li>OSCARS General Assembly, March 2026: poster and flash talk.</li>
+						<li>JDEV 2026 (French RSE conference), 23 June 2026: talk on FAIRness and metadata, and a
+							hands-on tutorial on CodeMetaSoft tools.</li>
+						<li>OSCARS final poster (<a href="media/codemetasoft_poster_A0.pdf" target="_blank">PDF</a>) and
+							1-minute video.</li>
+					</ul>
 				</div>
 			</div>
-
 		</div>
+		<div class="row copyright">
+			<div class="col-md-12 text-center">
+				<p>
+					<!--<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> -->
+					<small class="block">This page was built on a free template designed by <a
+							href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> (&copy; 2016 Free
+						HTML5)</small>
+				</p>
+			</div>
+		</div>
+
+	</div>
 	</footer>
 	</div>
 	<footer id="site-footer">
 		<div class="footer-container">
 			<p class="oscars-logo">
 				<a href="https://oscars-project.eu/">
-				<img src="media/OSCARS-logo.png" alt="Funding Organization Logo" class="footer-logo">
+					<img src="media/OSCARS-logo.png" alt="Funding Organization Logo" class="footer-logo">
 				</a>
 			</p>
 			<p class="acknowledgment">
-			The authors acknowledge the OSCARS project, which has received funding from the European Commission's Horizon Europe Research and Innovation programme under grant agreement No. 101129751
+				The authors acknowledge the OSCARS project, which has received funding from the European Commission's
+				Horizon Europe Research and Innovation programme under grant agreement No. 101129751
 			</p>
 		</div>
 	</footer>
@@ -174,7 +249,7 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
 	</div>
-	
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -188,6 +263,6 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
-	</body>
-</html>
+</body>
 
+</html>
