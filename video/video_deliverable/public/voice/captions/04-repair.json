@@ -1,0 +1,114 @@
+[
+  {
+    "text": "Our",
+    "startMs": 380,
+    "endMs": 700,
+    "timestampMs": 540,
+    "confidence": null
+  },
+  {
+    "text": " open",
+    "startMs": 700,
+    "endMs": 920,
+    "timestampMs": 810,
+    "confidence": null
+  },
+  {
+    "text": " source",
+    "startMs": 920,
+    "endMs": 1340,
+    "timestampMs": 1130,
+    "confidence": null
+  },
+  {
+    "text": " tools",
+    "startMs": 1340,
+    "endMs": 1700,
+    "timestampMs": 1520,
+    "confidence": null
+  },
+  {
+    "text": " run",
+    "startMs": 1700,
+    "endMs": 1960,
+    "timestampMs": 1830,
+    "confidence": null
+  },
+  {
+    "text": " these",
+    "startMs": 1960,
+    "endMs": 2220,
+    "timestampMs": 2090,
+    "confidence": null
+  },
+  {
+    "text": " checks",
+    "startMs": 2220,
+    "endMs": 2460,
+    "timestampMs": 2340,
+    "confidence": null
+  },
+  {
+    "text": " on",
+    "startMs": 2460,
+    "endMs": 2800,
+    "timestampMs": 2630,
+    "confidence": null
+  },
+  {
+    "text": " every",
+    "startMs": 2800,
+    "endMs": 3260,
+    "timestampMs": 3030,
+    "confidence": null
+  },
+  {
+    "text": " change",
+    "startMs": 3260,
+    "endMs": 3640,
+    "timestampMs": 3450,
+    "confidence": null
+  },
+  {
+    "text": " and",
+    "startMs": 3640,
+    "endMs": 3860,
+    "timestampMs": 3750,
+    "confidence": null
+  },
+  {
+    "text": " tell",
+    "startMs": 3860,
+    "endMs": 4300,
+    "timestampMs": 4080,
+    "confidence": null
+  },
+  {
+    "text": " maintainers",
+    "startMs": 4300,
+    "endMs": 4700,
+    "timestampMs": 4500,
+    "confidence": null
+  },
+  {
+    "text": " what",
+    "startMs": 4700,
+    "endMs": 4860,
+    "timestampMs": 4780,
+    "confidence": null
+  },
+  {
+    "text": " to",
+    "startMs": 4860,
+    "endMs": 5120,
+    "timestampMs": 4990,
+    "confidence": null
+  },
+  {
+    "text": " fix.",
+    "startMs": 5120,
+    "endMs": 5600,
+    "timestampMs": 5360,
+    "confidence": null
+  }
+]

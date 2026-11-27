@@ -1,0 +1,39 @@
+WEBVTT
+
+00:00:01.240 --> 00:00:03.520
+Research software metadata is written once,
+
+00:00:03.520 --> 00:00:05.000
+but is then left to rot.
+
+00:00:06.860 --> 00:00:09.700
+We checked 1,500 repositories.
+
+00:00:09.860 --> 00:00:13.500
+Almost a third declare a version
+that isn't their latest release.
+
+00:00:15.860 --> 00:00:20.460
+From those errors, we built a public catalogue
+of 29 common pitfalls,
+
+00:00:20.580 --> 00:00:22.800
+each with an example and a fix.
+
+00:00:25.880 --> 00:00:29.140
+Our open-source tools run these checks
+on every change
+
+00:00:29.140 --> 00:00:31.400
+and tell maintainers what to fix.
+
+00:00:34.660 --> 00:00:37.100
+Nine in ten flagged issues are real,
+
+00:00:37.220 --> 00:00:41.900
+and registries such as the ESCAPE OSSR
+can now check metadata quality.
+
+00:00:45.040 --> 00:00:50.600
+Find out more about our work
+at w3id.org/codemetasoft.

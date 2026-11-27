@@ -1,0 +1,107 @@
+[
+  {
+    "text": "We",
+    "startMs": 360,
+    "endMs": 660,
+    "timestampMs": 510,
+    "confidence": null
+  },
+  {
+    "text": " checked",
+    "startMs": 660,
+    "endMs": 1460,
+    "timestampMs": 1060,
+    "confidence": null
+  },
+  {
+    "text": " 1500",
+    "startMs": 1460,
+    "endMs": 2460,
+    "timestampMs": 1960,
+    "confidence": null
+  },
+  {
+    "text": " repositories,",
+    "startMs": 2460,
+    "endMs": 3140,
+    "timestampMs": 2800,
+    "confidence": null
+  },
+  {
+    "text": " almost",
+    "startMs": 3360,
+    "endMs": 3620,
+    "timestampMs": 3490,
+    "confidence": null
+  },
+  {
+    "text": " a",
+    "startMs": 3620,
+    "endMs": 3880,
+    "timestampMs": 3750,
+    "confidence": null
+  },
+  {
+    "text": " third",
+    "startMs": 3880,
+    "endMs": 4400,
+    "timestampMs": 4140,
+    "confidence": null
+  },
+  {
+    "text": " declare",
+    "startMs": 4400,
+    "endMs": 4660,
+    "timestampMs": 4530,
+    "confidence": null
+  },
+  {
+    "text": " a",
+    "startMs": 4660,
+    "endMs": 4920,
+    "timestampMs": 4790,
+    "confidence": null
+  },
+  {
+    "text": " version",
+    "startMs": 4920,
+    "endMs": 5200,
+    "timestampMs": 5060,
+    "confidence": null
+  },
+  {
+    "text": " that",
+    "startMs": 5200,
+    "endMs": 5420,
+    "timestampMs": 5310,
+    "confidence": null
+  },
+  {
+    "text": " isn't",
+    "startMs": 5420,
+    "endMs": 5660,
+    "timestampMs": 5540,
+    "confidence": null
+  },
+  {
+    "text": " their",
+    "startMs": 5660,
+    "endMs": 6020,
+    "timestampMs": 5840,
+    "confidence": null
+  },
+  {
+    "text": " latest",
+    "startMs": 6020,
+    "endMs": 6540,
+    "timestampMs": 6280,
+    "confidence": null
+  },
+  {
+    "text": " release.",
+    "startMs": 6540,
+    "endMs": 6880,
+    "timestampMs": 6710,
+    "confidence": null
+  }
+]
