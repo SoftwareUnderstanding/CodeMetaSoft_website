@@ -3,6 +3,7 @@ name: Build video and deploy website
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -46,6 +47,7 @@ jobs:
           path: website
 
   deploy:
+    if: github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     environment:
