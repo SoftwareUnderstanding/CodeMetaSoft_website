@@ -48,7 +48,7 @@ Scenes start at 0 · 5.5 · 14.5 · 23.5 · 33 · 43 s. Consecutive scenes overl
 
 ## Voiceover
 
-The video plays the six clips in `public/voice/` (`01-hook.wav` to `06-outro.wav`), one per scene. Each `<Audio>` in `src/CodeMetaSoftVideo.tsx` has a `from` offset that centres the speech in its scene, so a new clip of a different length needs a new offset: (scene length − speech length) / 2. The script is in `voiceover-script.md`. The original recordings, including alternative voices, are in `voices/`. The video does not read from that folder.
+The video plays the six clips in `public/voice/` (`01-hook.wav` to `06-outro.wav`), one per scene. Each `<Audio>` in `src/CodeMetaSoftVideo.tsx` has a `from` offset that centres the speech in its scene, so a new clip of a different length needs a new offset: (scene length − speech length) / 2. The script is in `voiceover-script.md`. The original recordings (Fenrir) are in `voices/fenrir/`. The video does not read from that folder.
 
 To replace a clip:
 
