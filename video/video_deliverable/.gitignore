@@ -1,0 +1,28 @@
+# Dependencies: rebuilt by `npm install`
+node_modules/
+
+# Build and default render folders (our video goes to output/, which is kept)
+dist/
+build/
+out/
+
+# Archives: rebuild the project from git instead
+*.zip
+*.tar.gz
+
+# Secrets (API keys for text-to-speech, etc.)
+.env
+.env.*
+
+# Logs and caches
+npm-debug.log*
+*.log
+.cache/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+output/*.mp4

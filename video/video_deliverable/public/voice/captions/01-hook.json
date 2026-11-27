@@ -1,0 +1,86 @@
+[
+  {
+    "text": "Research",
+    "startMs": 640,
+    "endMs": 1180,
+    "timestampMs": 910,
+    "confidence": null
+  },
+  {
+    "text": " software",
+    "startMs": 1180,
+    "endMs": 1620,
+    "timestampMs": 1400,
+    "confidence": null
+  },
+  {
+    "text": " metadata",
+    "startMs": 1620,
+    "endMs": 1960,
+    "timestampMs": 1790,
+    "confidence": null
+  },
+  {
+    "text": " is",
+    "startMs": 1960,
+    "endMs": 2240,
+    "timestampMs": 2100,
+    "confidence": null
+  },
+  {
+    "text": " written",
+    "startMs": 2240,
+    "endMs": 2620,
+    "timestampMs": 2430,
+    "confidence": null
+  },
+  {
+    "text": " once",
+    "startMs": 2620,
+    "endMs": 2920,
+    "timestampMs": 2770,
+    "confidence": null
+  },
+  {
+    "text": " but",
+    "startMs": 2920,
+    "endMs": 3080,
+    "timestampMs": 3000,
+    "confidence": null
+  },
+  {
+    "text": " is",
+    "startMs": 3080,
+    "endMs": 3280,
+    "timestampMs": 3180,
+    "confidence": null
+  },
+  {
+    "text": " then",
+    "startMs": 3280,
+    "endMs": 3500,
+    "timestampMs": 3390,
+    "confidence": null
+  },
+  {
+    "text": " left",
+    "startMs": 3500,
+    "endMs": 3740,
+    "timestampMs": 3620,
+    "confidence": null
+  },
+  {
+    "text": " to",
+    "startMs": 3740,
+    "endMs": 3980,
+    "timestampMs": 3860,
+    "confidence": null
+  },
+  {
+    "text": " rot.",
+    "startMs": 3980,
+    "endMs": 4000,
+    "timestampMs": 3990,
+    "confidence": null
+  }
+]

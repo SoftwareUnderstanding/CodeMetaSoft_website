@@ -1,0 +1,86 @@
+[
+  {
+    "text": "Find",
+    "startMs": 440,
+    "endMs": 580,
+    "timestampMs": 510,
+    "confidence": null
+  },
+  {
+    "text": " out",
+    "startMs": 580,
+    "endMs": 840,
+    "timestampMs": 710,
+    "confidence": null
+  },
+  {
+    "text": " more",
+    "startMs": 840,
+    "endMs": 1140,
+    "timestampMs": 990,
+    "confidence": null
+  },
+  {
+    "text": " about",
+    "startMs": 1140,
+    "endMs": 1260,
+    "timestampMs": 1200,
+    "confidence": null
+  },
+  {
+    "text": " our",
+    "startMs": 1260,
+    "endMs": 1500,
+    "timestampMs": 1380,
+    "confidence": null
+  },
+  {
+    "text": " work",
+    "startMs": 1500,
+    "endMs": 1680,
+    "timestampMs": 1590,
+    "confidence": null
+  },
+  {
+    "text": " at",
+    "startMs": 1680,
+    "endMs": 2080,
+    "timestampMs": 1880,
+    "confidence": null
+  },
+  {
+    "text": " w3id",
+    "startMs": 2080,
+    "endMs": 3320,
+    "timestampMs": 2700,
+    "confidence": null
+  },
+  {
+    "text": ".org",
+    "startMs": 3320,
+    "endMs": 4380,
+    "timestampMs": 3850,
+    "confidence": null
+  },
+  {
+    "text": " slash",
+    "startMs": 4380,
+    "endMs": 4760,
+    "timestampMs": 4570,
+    "confidence": null
+  },
+  {
+    "text": " Code",
+    "startMs": 4760,
+    "endMs": 4900,
+    "timestampMs": 4830,
+    "confidence": null
+  },
+  {
+    "text": " Matassoft.",
+    "startMs": 4900,
+    "endMs": 5600,
+    "timestampMs": 5250,
+    "confidence": null
+  }
+]

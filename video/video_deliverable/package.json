@@ -1,0 +1,42 @@
+{
+  "name": "codemetasoft-video",
+  "version": "1.0.0",
+  "description": "My Remotion video",
+  "repository": {},
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24"
+  },
+  "private": true,
+  "dependencies": {
+    "@huggingface/transformers": "4.2.0",
+    "@mediabunny/server": "1.64.0",
+    "@remotion/cli": "4.0.540",
+    "@remotion/google-fonts": "4.0.540",
+    "@remotion/media": "4.0.540",
+    "@remotion/transitions": "4.0.540",
+    "@remotion/whisper-webgpu": "4.0.540",
+    "mediabunny": "1.64.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.540"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.540",
+    "@types/react": "19.3.0",
+    "@types/web": "0.0.166",
+    "eslint": "10.12.0",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "upgrade": "remotion upgrade",
+    "lint": "eslint src && tsc",
+    "render": "remotion render CodeMetaSoft output/codemetasoft.mp4 --codec=h264"
+  },
+  "allowScripts": {
+    "esbuild": false
+  }
+}

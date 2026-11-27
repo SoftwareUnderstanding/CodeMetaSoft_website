@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CodeMetaSoft Final Poster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- OSCARS guidelines ask for Calibri. Carlito is its metric-compatible open twin. -->
+<link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  /* A0 portrait, OSCARS "ended projects" template. All sizes in mm. */
+  @page { size: 841mm 1189mm; margin: 0; }
+  :root {
+    --ink: #1c3052;        /* OSCARS navy, used for text in boxes */
+    --muted: #3d4766;
+    --purple: #9e549c;
+    --pink: #b171b1;
+    --blue: #3392d1;
+    --pit: #b3245c;        /* pitfalls */
+    --warn: #c87a00;       /* warnings */
+    --ok: #1f7a5c;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #4b2b80; }
+  body {
+    width: 841mm; height: 1189mm; overflow: hidden; position: relative;
+    background: url(assets/oscars_bg_nologo.png) center / 100% 100% no-repeat;
+    font-family: Calibri, Carlito, "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink); font-size: 9.4mm; line-height: 1.3;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  code, .mono { font-family: "JetBrains Mono", Menlo, monospace; font-size: 0.84em; }
+  b, strong { font-weight: 700; }
+
+  /* ---------- header (OSCARS logo is part of the background) ---------- */
+  .people {
+    position: absolute; top: 34mm; right: 28mm; width: 500mm;
+    color: #fff; text-align: right; line-height: 1.3;
+  }
+  .people .names { font-size: 15mm; font-weight: 700; line-height: 1.3; }
+  .people .oid { font-size: 0.6em; font-weight: 400; white-space: nowrap; }
+  .people .oid a { color: inherit; text-decoration: none; }
+  .people sup { font-size: 0.6em; font-weight: 400; line-height: 0; }
+  .people .names svg { width: 0.95em; height: 0.95em; display: inline-block; vertical-align: -0.12em; }
+  .people .aff { font-size: 10.5mm; margin-top: 2.5mm; opacity: .95; }
+  .people .orcids { font-size: 6.8mm; margin-top: 2.5mm; opacity: .85; }
+  .title { position: absolute; top: 128mm; left: 28mm; right: 28mm; color: #fff; }
+  .title h1 { font-size: 38mm; font-weight: 700; line-height: 1; letter-spacing: -0.3mm; }
+  .title .sub { font-size: 15mm; line-height: 1.15; margin-top: 3mm; max-width: 560mm; }
+  .title .link { font-size: 10.5mm; margin-top: 3mm; opacity: .95; }
+  .clusters { position: absolute; top: 168mm; right: 28mm; display: flex; gap: 8mm; align-items: center; }
+  .clusters img { height: 34mm; width: auto; display: block; }
+  .logo { position: absolute; left: 22.8mm; top: 31.9mm; width: 273mm; display: block; }
+  .clusters .lbl { color: #fff; font-size: 6mm; text-align: right; line-height: 1.2; margin-right: 2mm; }
+
+  /* ---------- boxes ---------- */
+  main {
+    position: absolute; top: 222mm; left: 28mm; right: 28mm; bottom: 92mm;
+    display: grid; gap: 11mm 20mm;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      "summary figure"
+      "challenge solution"
+      "results results"
+      "exploit sustain";
+  }
+  .box {
+    border-radius: 8mm; padding: 9mm 11mm 9mm;
+    position: relative;
+  }
+  .g-blue   { background: linear-gradient(to bottom right, #9ac7e6 0%, #e7f1fc 54%, #fff 100%); }
+  .g-blue2  { background: linear-gradient(to bottom right, #fff 0%, #e7f1fc 50%, #9ac7e6 100%); }
+  .g-blue3  { background: linear-gradient(to bottom right, #fff 0%, #e7f1fc 52%, #97b0e4 100%); }
+  .g-lav    { background: linear-gradient(to bottom right, #c7bdec 0%, #ece8f9 55%, #fff 100%); }
+  .g-lav2   { background: linear-gradient(to bottom right, #fff 0%, #c7bdec 59%, #a19bbb 100%); }
+  .g-pink   { background: linear-gradient(to bottom right, #fff 0%, #ecccff 47%, #b171b1 100%); }
+
+  h2 { font-size: 19.0mm; font-weight: 400; line-height: 1; color: #000; margin-bottom: 5mm; }
+  h3 { font-size: 10.1mm; font-weight: 700; margin: 5mm 0 2mm; }
+  p + p { margin-top: 3mm; }
+  ul.b { list-style: none; }
+  ul.b li { padding-left: 6mm; position: relative; margin-top: 1.2mm; }
+  ul.b li::before { content: ""; position: absolute; left: 0; top: 3.5mm; width: 2.6mm; height: 2.6mm; border-radius: 50%; background: var(--ink); }
+  .small { font-size: 7.8mm; color: var(--muted); line-height: 1.3; }
+
+  .summary  { grid-area: summary; }
+  .figure   { grid-area: figure; }
+  .challenge{ grid-area: challenge; }
+  .solution { grid-area: solution; }
+  .results  { grid-area: results; }
+  .exploit  { grid-area: exploit; }
+  .sustain  { grid-area: sustain; }
+
+  .summary p { font-size: 10.1mm; line-height: 1.3; }
+  .summary .claim { font-size: 12.3mm; font-weight: 700; line-height: 1.15; margin-bottom: 4mm; }
+  .summary .claim em { font-style: normal; color: var(--pit); }
+
+  /* figure box: outlined, transparent, like the template */
+  .figure {
+    border: 2.1mm solid var(--blue); border-radius: 8mm; padding: 8mm 10mm;
+    color: #fff; display: flex; flex-direction: column; justify-content: center;
+  }
+  .figure .cap-top { font-size: 10.1mm; font-weight: 700; margin-bottom: 3mm; }
+  .snippet {
+    background: #1b1f3b; color: #e6e8f5; border-radius: 4mm; padding: 5mm 6mm;
+    font-family: "JetBrains Mono", monospace; font-size: 6.8mm; line-height: 1.55;
+  }
+  .snippet .k { color: #9fb8ff; }
+  .snippet .bad { background: rgba(179,36,92,.45); border-radius: 1mm; padding: 0 1mm; }
+  .snippet .badw { background: rgba(217,138,11,.45); border-radius: 1mm; padding: 0 1mm; }
+  .snippet .tag { float: right; font-weight: 700; font-size: 5.4mm; padding: 0 2mm; border-radius: 1mm; color: #fff; margin-top: 0.6mm; }
+  .snippet .tag.p { background: var(--pit); }
+  .snippet .tag.w { background: #d98a0b; }
+  .figure .cap { font-size: 7.4mm; line-height: 1.3; margin-top: 3mm; opacity: .95; }
+
+  /* solution: pipeline */
+  .pipe { display: grid; gap: 2.6mm; }
+  .step { display: grid; grid-template-columns: 40mm 1fr; gap: 4mm; align-items: start; }
+  .step .tagb { background: var(--ink); color: #fff; border-radius: 3mm; font-weight: 700; font-size: 8.3mm; text-align: center; padding: 1.6mm 0; }
+  .step:nth-child(2) .tagb { background: #4a4f9c; }
+  .step:nth-child(3) .tagb { background: var(--purple); }
+  .step:nth-child(4) .tagb { background: var(--blue); }
+  .step .txt { font-size: 8.5mm; line-height: 1.25; padding-top: 0.8mm; }
+  .split { display: flex; height: 11mm; border-radius: 2mm; overflow: hidden; margin-top: 4mm; font-weight: 700; font-size: 8.1mm; color: #fff; }
+  .split div { display: flex; align-items: center; padding-left: 4mm; }
+
+  /* results */
+  .results .cols { display: grid; grid-template-columns: 1.08fr 1fr; gap: 16mm; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8mm; margin-bottom: 4mm; }
+  .stat { border-top: 2mm solid var(--pit); padding-top: 3mm; }
+  .stat.w { border-color: var(--warn); }
+  .stat.n { border-color: var(--blue); }
+  .stat .num { font-size: 28.0mm; font-weight: 700; line-height: 1; }
+  .stat .lbl { font-size: 8.2mm; line-height: 1.22; margin-top: 2mm; }
+  .stat .code { font-family: "JetBrains Mono", monospace; font-size: 6.3mm; font-weight: 700; color: var(--muted); display: block; margin-top: 1.5mm; }
+  .bar { display: grid; grid-template-columns: 25mm 1fr; gap: 3mm; align-items: end; margin-top: 1.4mm; }
+  .bar .c { font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 6.9mm; line-height: 1; padding-bottom: .5mm; }
+  .bar .c.p { color: var(--pit); }
+  .bar .c.w { color: var(--warn); }
+  .bar .lab { font-size: 7.6mm; line-height: 1.1; margin-bottom: 0.6mm; }
+  .bar .row { display: flex; align-items: center; gap: 3mm; }
+  .bar .fill { height: 6.5mm; border-radius: 0 1.5mm 1.5mm 0; }
+  .bar .fill.p { background: var(--pit); }
+  .bar .fill.w { background: var(--warn); }
+  .bar .val { font-size: 8.1mm; font-weight: 700; line-height: 1; }
+  .legend { display: flex; gap: 8mm; font-size: 7.4mm; margin-top: 3mm; color: var(--muted); }
+  .legend i { display: inline-block; width: 4.5mm; height: 4.5mm; border-radius: 1mm; margin-right: 2mm; transform: translateY(0.5mm); }
+  .kv { display: grid; grid-template-columns: auto 1fr; gap: 1mm 5mm; margin-top: 2mm; align-items: baseline; }
+  .kv .k { font-size: 14.6mm; font-weight: 700; line-height: 1; }
+  .kv .k.p { color: var(--pit); }
+  .kv .k.w { color: var(--warn); }
+  .kv .k.ok { color: var(--ok); }
+  .kv .v { font-size: 8.4mm; line-height: 1.22; }
+  .results h3:first-child { margin-top: 0; }
+
+  /* exploitation */
+  .lessons { display: grid; gap: 2mm; margin-top: 2mm; }
+  .lessons div { border-left: 1.6mm solid var(--purple); padding-left: 4mm; font-size: 8.5mm; line-height: 1.25; }
+  .lessons b { display: block; }
+  .next { font-size: 7.8mm; margin-top: 3mm; color: var(--muted); }
+
+  /* sustainability: tools */
+  .tool { display: grid; grid-template-columns: 74mm 1fr; gap: 4mm; padding: 2.4mm 0; border-top: 0.4mm solid rgba(28,48,82,.25); }
+  .tool:first-of-type { border-top: none; padding-top: 0; }
+  .tool .nm { font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 7.1mm; color: #5a2c69; line-height: 1.25; }
+  .tool .nm span { display: block; font-family: Calibri, Carlito, sans-serif; font-weight: 400; color: var(--muted); font-size: 6.9mm; }
+  .tool .d { font-size: 8.2mm; line-height: 1.24; }
+
+  /* ---------- footer bar ---------- */
+  footer {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 66mm;
+    background: #b171b1; border-top: 0.4mm solid #1c3052;
+    display: flex; align-items: center; gap: 10mm; padding: 0 10mm 0 13mm; color: #fff;
+  }
+  footer .eu { height: 30mm; display: block; }
+  footer .grant { font-size: 5.6mm; line-height: 1.3; max-width: 175mm; }
+  footer .learn { margin-left: auto; text-align: right; font-size: 6mm; line-height: 1.3; }
+  footer .learn b { display: block; font-size: 9mm; }
+  .qrs { display: flex; gap: 8mm; }
+  .qr { display: flex; flex-direction: column; align-items: center; gap: 1.5mm; }
+  .qr .tile { background: #fff; border-radius: 4mm; padding: 2.5mm; }
+  .qr img { width: 40mm; height: 40mm; display: block; }
+  .qr span { font-size: 5.4mm; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<img class="logo" src="assets/oscars_logo_white.svg" alt="OSCARS – Open Science Clusters' Action for Research &amp; Society">
+
+<div class="people">
+  <div class="names">Anas El Hounsri<sup>1</sup> <span class="oid">(<a href="https://orcid.org/0009-0005-6868-4511"><svg viewBox="0 0 24 24" aria-label="ORCID"><circle cx="12" cy="12" r="12" fill="#a6ce39"/><text x="12" y="16.2" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">iD</text></svg> 0009-0005-6868-4511</a>)</span>, Daniel Garijo<sup>1</sup> <span class="oid">(<a href="https://orcid.org/0000-0003-0454-7145"><svg viewBox="0 0 24 24" aria-label="ORCID"><circle cx="12" cy="12" r="12" fill="#a6ce39"/><text x="12" y="16.2" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">iD</text></svg> 0000-0003-0454-7145</a>)</span>,<br>Tom François<sup>2</sup> <span class="oid">(<a href="https://orcid.org/0000-0001-5226-3089"><svg viewBox="0 0 24 24" aria-label="ORCID"><circle cx="12" cy="12" r="12" fill="#a6ce39"/><text x="12" y="16.2" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">iD</text></svg> 0000-0001-5226-3089</a>)</span>, Thomas Vuillaume<sup>2</sup> <span class="oid">(<a href="https://orcid.org/0000-0002-5686-2078"><svg viewBox="0 0 24 24" aria-label="ORCID"><circle cx="12" cy="12" r="12" fill="#a6ce39"/><text x="12" y="16.2" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">iD</text></svg> 0000-0002-5686-2078</a>)</span></div>
+  <div class="aff"><sup>1</sup> Ontology Engineering Group, Universidad Politécnica de Madrid, Spain<br><sup>2</sup> LAPP, CNRS / Université Savoie Mont Blanc, Annecy, France<br>with Oscar Corcho and Esteban González (UPM)</div>
+</div>
+
+<div class="title">
+  <h1>CodeMetaSoft</h1>
+  <div class="sub">Detecting, reporting and fixing research software metadata drift</div>
+  <div class="link">w3id.org/codemetasoft</div>
+</div>
+
+<div class="clusters">
+  <img src="assets/cluster_envri.png" alt="Environmental sciences cluster (ENVRI)">
+  <img src="assets/cluster_escape.png" alt="Astronomy and particle physics cluster (ESCAPE)">
+  <img src="assets/cluster_lsri.png" alt="Life sciences cluster (LS RI)">
+  <img src="assets/cluster_panosc.png" alt="Photon and neutron cluster (PaNOSC)">
+  <img src="assets/cluster_ssh.png" alt="Social sciences and humanities cluster (SSH)">
+</div>
+
+<main>
+
+  <!-- Summary -->
+  <section class="box g-blue summary">
+    <h2>Summary</h2>
+    <p class="claim">Your <code>codemeta.json</code> was right the day you wrote it. Is it still?</p>
+    <p>Software metadata gets written once and then <b>left to rot</b>. We built a checker that compares <code>codemeta.json</code> with the rest of the repository, a catalogue of 29 issues, and a bot and CI action that report them.</p>
+    <p>On 1,500 repositories that already ship the file, most issues are about time: versions, dates and dependencies that were right once and never updated. The gap is maintenance, not adoption.</p>
+  </section>
+
+  <!-- Figure -->
+  <section class="figure">
+    <div class="cap-top">A typical codemeta.json, one release later</div>
+    <div class="snippet">
+{<br>
+&nbsp;&nbsp;<span class="k">"version"</span>: <span class="bad">"1.1.0"</span>,<span class="tag p">P001</span><br>
+&nbsp;&nbsp;<span class="k">"license"</span>: <span class="bad">"GPL"</span>,<span class="tag p">P013</span><br>
+&nbsp;&nbsp;<span class="k">"identifier"</span>: <span class="bad">"10.5281/zenodo.123"</span>,<span class="tag p">P014</span><br>
+&nbsp;&nbsp;<span class="k">"dateModified"</span>: <span class="badw">"2022-03-01"</span>,<span class="tag w">W002</span><br>
+&nbsp;&nbsp;<span class="k">"softwareRequirements"</span>: [<span class="badw">"numpy"</span>]<span class="tag w">W001</span><br>
+}
+    </div>
+    <div class="cap">Illustrative file. The latest release is 1.2.0, the license needs a version, the DOI is not a URL, the file has not changed since 2022, and numpy has no version.</div>
+  </section>
+
+  <!-- Challenge -->
+  <section class="box g-lav challenge">
+    <h2>Challenge</h2>
+    <ul class="b">
+      <li>Software metadata (authors, version, license, identifiers, dependencies) makes research software findable, citable and reusable.</li>
+      <li>It is spread over many files: <code>pyproject.toml</code>, <code>pom.xml</code>, <code>DESCRIPTION</code>, <code>CITATION.cff</code>, <code>README</code>, <code>LICENSE</code>. CodeMeta gathers it in one <code>codemeta.json</code>, written by hand.</li>
+      <li>FAIR checkers test whether a field is <i>present</i>. None checked whether its value is <b>correct</b> or agrees with the rest of the repository.</li>
+      <li>Adoption is low too: only <b>0.13%</b> of 370,684 OpenAIRE software repositories have a <code>codemeta.json</code>.</li>
+    </ul>
+  </section>
+
+  <!-- Solution -->
+  <section class="box g-lav2 solution">
+    <h2>Solution</h2>
+    <div class="pipe">
+      <div class="step"><div class="tagb">Measure</div><div class="txt">Metadata practices in the Science Clusters (MSR 2025), the OpenAIRE Graph and 1,500 CodeMeta repositories.</div></div>
+      <div class="step"><div class="tagb">Diagnose</div><div class="txt">Two authors and two experts inspected 150 random repositories by hand.</div></div>
+      <div class="step"><div class="tagb">Repair</div><div class="txt">One detection rule and one repository-specific fix per catalogued issue.</div></div>
+      <div class="step"><div class="tagb">Monitor</div><div class="txt">A CI check for developers; a bot and a dashboard for registries and labs.</div></div>
+    </div>
+    <div class="split">
+      <div style="flex:19;background:var(--pit)">19 pitfalls</div>
+      <div style="flex:10;background:var(--warn)">10 warnings</div>
+    </div>
+    <p class="small" style="margin-top:2.5mm"><b>Pitfalls</b> break schema compliance, licensing or citation pipelines. <b>Warnings</b> lower quality without breaking them.</p>
+  </section>
+
+  <!-- Results -->
+  <section class="box g-blue2 results">
+    <h2>Results</h2>
+    <div class="cols">
+      <div>
+        <div class="stats">
+          <div class="stat"><div class="num">30%</div><div class="lbl">version does not match the latest release</div><span class="code">P001</span></div>
+          <div class="stat"><div class="num">24%</div><div class="lbl">version contradicts the package manifest</div><span class="code">P017</span></div>
+          <div class="stat w"><div class="num">56%</div><div class="lbl">requirements listed without versions</div><span class="code">W001</span></div>
+          <div class="stat w"><div class="num">18%</div><div class="lbl">stale <code>dateModified</code></div><span class="code">W002</span></div>
+        </div>
+        <p class="small">Ten most frequent issues in 1,500 repositories with a <code>codemeta.json</code> (share affected):</p>
+        <div class="bar"><span class="c w">W004</span><div><div class="lab">Programming language without version</div><div class="row"><div class="fill w" style="width:81.8%"></div><span class="val">57%</span></div></div></div>
+        <div class="bar"><span class="c w">W001</span><div><div class="lab">Software requirements without versions</div><div class="row"><div class="fill w" style="width:80.1%"></div><span class="val">56%</span></div></div></div>
+        <div class="bar"><span class="c p">P001</span><div><div class="lab">Version does not match the latest release</div><div class="row"><div class="fill p" style="width:43.0%"></div><span class="val">30%</span></div></div></div>
+        <div class="bar"><span class="c p">P017</span><div><div class="lab">Version contradicts the package manifest</div><div class="row"><div class="fill p" style="width:34.1%"></div><span class="val">24%</span></div></div></div>
+        <div class="bar"><span class="c w">W002</span><div><div class="lab">dateModified older than the last update</div><div class="row"><div class="fill w" style="width:26.4%"></div><span class="val">18%</span></div></div></div>
+        <div class="bar"><span class="c p">P015</span><div><div class="lab">Continuous integration link returns 404</div><div class="row"><div class="fill p" style="width:26.2%"></div><span class="val">18%</span></div></div></div>
+        <div class="bar"><span class="c w">W009</span><div><div class="lab">developmentStatus is a URL, not a string</div><div class="row"><div class="fill w" style="width:25.9%"></div><span class="val">18%</span></div></div></div>
+        <div class="bar"><span class="c p">P010</span><div><div class="lab">LICENSE holds a copyright line, no license</div><div class="row"><div class="fill p" style="width:19.8%"></div><span class="val">14%</span></div></div></div>
+        <div class="bar"><span class="c p">P016</span><div><div class="lab">codeRepository points to another repository</div><div class="row"><div class="fill p" style="width:15.8%"></div><span class="val">11%</span></div></div></div>
+        <div class="bar"><span class="c w">W006</span><div><div class="lab">Identifier is a name, not a unique ID</div><div class="row"><div class="fill w" style="width:15.3%"></div><span class="val">11%</span></div></div></div>
+        <div class="legend"><span><i style="background:var(--pit)"></i>Pitfall</span><span><i style="background:var(--warn)"></i>Warning</span></div>
+      </div>
+      <div>
+        <h3>The checker is accurate</h3>
+        <p>Measured against a published hand-annotated ground truth (rsmetacheck 0.3.5, 143 repositories):</p>
+        <div class="kv">
+          <span class="k ok">0.89</span><span class="v"><b>precision</b>: 358 of 403 findings are right</span>
+          <span class="k ok">0.80</span><span class="v"><b>recall</b>: 0.88 without W004, a rule we relaxed after maintainer feedback</span>
+        </div>
+
+        <h3>Curation helps, but not over time</h3>
+        <p>The <b>ESCAPE OSSR</b> (30 particle physics and astronomy projects) requires a <code>codemeta.json</code> at submission. Even there:</p>
+        <div class="kv">
+          <span class="k p">1.0</span><span class="v">pitfall per record on average</span>
+          <span class="k w">1.4</span><span class="v">warnings per record on average</span>
+        </div>
+        <p style="margin-top:2.5mm">53% list requirements without versions, 40% have a stale <code>dateModified</code>. The onboarding review catches broken links; drift escapes it.</p>
+
+        <h3>Monitoring runs, behaviour does not change</h3>
+        <p>The bot ran <b>50 times unattended</b> on the OEG-UPM organisation (331 → 341 repositories, Jul–Sep 2026). Pitfalls per repository went from 0.060 to 0.070, warnings from 0.193 to 0.202. An issue alone does not change practice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Exploitation -->
+  <section class="box g-blue3 exploit">
+    <h2>Exploitation of results</h2>
+    <ul class="b">
+      <li><b>ESCAPE OSSR</b> runs value checks and a public monitoring page on top of its CodeMeta completeness indicator.</li>
+      <li><b>EVERSE</b>: reports follow its assessment schema; LAPP's completeness indicator is registered there.</li>
+      <li><b>FAIR2ADAPT</b> shows rsmetacheck reports in its software catalogue.</li>
+      <li>Nothing is physics-specific: any lab or registry can point the bot at its repositories.</li>
+    </ul>
+    <h3>What we learned</h3>
+    <div class="lessons">
+      <div><b>Check values, not fields.</b> Comparing <code>codemeta.json</code> with manifests, releases and <code>CITATION.cff</code> finds what presence checks miss.</div>
+      <div><b>Policy catches structure, not drift.</b> Versions and dates go stale after the submission review.</div>
+      <div><b>Fixes should arrive at release time,</b> as pull requests, when people care about metadata.</div>
+    </div>
+    <p class="next">Next: auto-fix pull requests for the easy cases, rsmetacheck at OSSR submission, Software Heritage integration.</p>
+  </section>
+
+  <!-- Sustainability -->
+  <section class="box g-pink sustain">
+    <h2>Sustainability</h2>
+    <p style="margin-bottom:3mm">All tools are open source and run without us. Every catalogue entry has a persistent identifier, e.g. <code>w3id.org/rsmetacheck/catalog/#P001</code>, with a definition, a real example and a fix.</p>
+    <div class="tool"><div class="nm">rsmetacheck<span>library + CLI · v0.3.6</span></div><div class="d">Extracts metadata with SoMEF, applies the 29 rules, writes JSON-LD reports in the EVERSE schema. 416 unit tests.</div></div>
+    <div class="tool"><div class="nm">rsmetacheck-action<span>GitHub Marketplace</span></div><div class="d">Runs on every push or PR and annotates the diff. A GitLab CI job does the same.</div></div>
+    <div class="tool"><div class="nm">rsmetacheck-bot<span>v0.6.1</span></div><div class="d">Watches GitHub and GitLab repositories, keeps one issue per repository up to date, respects opt-outs.</div></div>
+    <div class="tool"><div class="nm">rsmetacheck-dashboard</div><div class="d">Public page with the latest findings and run history.</div></div>
+    <div class="tool"><div class="nm">Auto CodeMeta<span>v3.0 · web app</span></div><div class="d">Paste a repository URL to get a pre-filled CodeMeta 2.0/3.0 file.</div></div>
+  </section>
+
+</main>
+
+<footer>
+  <img class="eu" src="assets/eu_funded_white.png" alt="Funded by the European Union">
+  <div class="grant">OSCARS has received funding from the European Commission's Horizon Europe research and innovation programme under grant agreement No. 101129751. CodeMetaSoft ran from 1 Nov 2024 to 31 Oct 2026.</div>
+  <div class="learn"><b>Learn more about the project</b>w3id.org/codemetasoft</div>
+  <div class="qrs">
+    <div class="qr"><div class="tile"><img src="assets/qr_codemetasoft.svg" alt="QR code for the project website"></div><span>Project</span></div>
+    <div class="qr"><div class="tile"><img src="assets/qr_catalog.svg" alt="QR code for the issue catalogue"></div><span>Catalogue</span></div>
+    <div class="qr"><div class="tile"><img src="assets/qr_rsmetacheck.svg" alt="QR code for the GitHub Action"></div><span>CI action</span></div>
+  </div>
+</footer>
+
+</body>
+</html>

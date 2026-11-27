@@ -1,0 +1,135 @@
+[
+  {
+    "text": "9",
+    "startMs": 560,
+    "endMs": 740,
+    "timestampMs": 650,
+    "confidence": null
+  },
+  {
+    "text": " in",
+    "startMs": 740,
+    "endMs": 1080,
+    "timestampMs": 910,
+    "confidence": null
+  },
+  {
+    "text": " 10",
+    "startMs": 1080,
+    "endMs": 1540,
+    "timestampMs": 1310,
+    "confidence": null
+  },
+  {
+    "text": " flagged",
+    "startMs": 1540,
+    "endMs": 2000,
+    "timestampMs": 1770,
+    "confidence": null
+  },
+  {
+    "text": " issues",
+    "startMs": 2000,
+    "endMs": 2300,
+    "timestampMs": 2150,
+    "confidence": null
+  },
+  {
+    "text": " are",
+    "startMs": 2300,
+    "endMs": 2620,
+    "timestampMs": 2460,
+    "confidence": null
+  },
+  {
+    "text": " real,",
+    "startMs": 2620,
+    "endMs": 3000,
+    "timestampMs": 2810,
+    "confidence": null
+  },
+  {
+    "text": " and",
+    "startMs": 3120,
+    "endMs": 3400,
+    "timestampMs": 3260,
+    "confidence": null
+  },
+  {
+    "text": " registries",
+    "startMs": 3400,
+    "endMs": 3940,
+    "timestampMs": 3670,
+    "confidence": null
+  },
+  {
+    "text": " such",
+    "startMs": 3940,
+    "endMs": 4200,
+    "timestampMs": 4070,
+    "confidence": null
+  },
+  {
+    "text": " as",
+    "startMs": 4200,
+    "endMs": 4340,
+    "timestampMs": 4270,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 4340,
+    "endMs": 4720,
+    "timestampMs": 4530,
+    "confidence": null
+  },
+  {
+    "text": " Escape",
+    "startMs": 4720,
+    "endMs": 5040,
+    "timestampMs": 4880,
+    "confidence": null
+  },
+  {
+    "text": " OSSR",
+    "startMs": 5040,
+    "endMs": 5900,
+    "timestampMs": 5470,
+    "confidence": null
+  },
+  {
+    "text": " can",
+    "startMs": 5900,
+    "endMs": 6180,
+    "timestampMs": 6040,
+    "confidence": null
+  },
+  {
+    "text": " now",
+    "startMs": 6180,
+    "endMs": 6460,
+    "timestampMs": 6320,
+    "confidence": null
+  },
+  {
+    "text": " check",
+    "startMs": 6460,
+    "endMs": 6860,
+    "timestampMs": 6660,
+    "confidence": null
+  },
+  {
+    "text": " metadata",
+    "startMs": 6860,
+    "endMs": 7460,
+    "timestampMs": 7160,
+    "confidence": null
+  },
+  {
+    "text": " quality.",
+    "startMs": 7460,
+    "endMs": 8000,
+    "timestampMs": 7730,
+    "confidence": null
+  }
+]

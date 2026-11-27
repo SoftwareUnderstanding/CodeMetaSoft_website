@@ -1,0 +1,135 @@
+[
+  {
+    "text": "From",
+    "startMs": 360,
+    "endMs": 600,
+    "timestampMs": 480,
+    "confidence": null
+  },
+  {
+    "text": " those",
+    "startMs": 600,
+    "endMs": 1000,
+    "timestampMs": 800,
+    "confidence": null
+  },
+  {
+    "text": " errors,",
+    "startMs": 1000,
+    "endMs": 1280,
+    "timestampMs": 1140,
+    "confidence": null
+  },
+  {
+    "text": " we",
+    "startMs": 1280,
+    "endMs": 1500,
+    "timestampMs": 1390,
+    "confidence": null
+  },
+  {
+    "text": " built",
+    "startMs": 1500,
+    "endMs": 1720,
+    "timestampMs": 1610,
+    "confidence": null
+  },
+  {
+    "text": " a",
+    "startMs": 1720,
+    "endMs": 2060,
+    "timestampMs": 1890,
+    "confidence": null
+  },
+  {
+    "text": " public",
+    "startMs": 2060,
+    "endMs": 2460,
+    "timestampMs": 2260,
+    "confidence": null
+  },
+  {
+    "text": " catalog",
+    "startMs": 2460,
+    "endMs": 2860,
+    "timestampMs": 2660,
+    "confidence": null
+  },
+  {
+    "text": " of",
+    "startMs": 2860,
+    "endMs": 3420,
+    "timestampMs": 3140,
+    "confidence": null
+  },
+  {
+    "text": " 29",
+    "startMs": 3420,
+    "endMs": 3860,
+    "timestampMs": 3640,
+    "confidence": null
+  },
+  {
+    "text": " common",
+    "startMs": 3860,
+    "endMs": 4400,
+    "timestampMs": 4130,
+    "confidence": null
+  },
+  {
+    "text": " pitfalls,",
+    "startMs": 4400,
+    "endMs": 4960,
+    "timestampMs": 4680,
+    "confidence": null
+  },
+  {
+    "text": " each",
+    "startMs": 5080,
+    "endMs": 5320,
+    "timestampMs": 5200,
+    "confidence": null
+  },
+  {
+    "text": " with",
+    "startMs": 5320,
+    "endMs": 5440,
+    "timestampMs": 5380,
+    "confidence": null
+  },
+  {
+    "text": " an",
+    "startMs": 5440,
+    "endMs": 5840,
+    "timestampMs": 5640,
+    "confidence": null
+  },
+  {
+    "text": " example",
+    "startMs": 5840,
+    "endMs": 6160,
+    "timestampMs": 6000,
+    "confidence": null
+  },
+  {
+    "text": " and",
+    "startMs": 6160,
+    "endMs": 6280,
+    "timestampMs": 6220,
+    "confidence": null
+  },
+  {
+    "text": " a",
+    "startMs": 6280,
+    "endMs": 6560,
+    "timestampMs": 6420,
+    "confidence": null
+  },
+  {
+    "text": " fix.",
+    "startMs": 6560,
+    "endMs": 7000,
+    "timestampMs": 6780,
+    "confidence": null
+  }
+]

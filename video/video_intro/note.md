@@ -1,8 +1,8 @@
 # CodeMetaSoft introduction video 
 
-Video URL: https://softwareunderstanding.github.io/CodeMetaSoft_website/video/intro.mp4
+Video URL: https://softwareunderstanding.github.io/CodeMetaSoft_website/video/video_intro/intro.mp4
 
-Video audio only: https://softwareunderstanding.github.io/CodeMetaSoft_website/video/intro_audio.m4a
+Video audio only: https://softwareunderstanding.github.io/CodeMetaSoft_website/video/video_intro/intro_audio.m4a
 
 Video text:
 ```
